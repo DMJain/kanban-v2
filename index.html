@@ -7,34 +7,66 @@
     <title>Kanban</title>
   </head>
   <body>
+    <nav>
+      <div class="nav-container">
+        <h1>Kanban</h1>
+        <div class="nav-btns">
+          <button id="color-mode">Black/WHite</button>
+        </div>
+      </div>
+    </nav>
     <div class="container">
-      <div class="input-container">
+      <!-- <div class="input-container">
         <input type="text" placeholder="Type your task" id="todo-input" />
         <button id="create-todo-btn">Create</button>
-      </div>
+      </div> -->
       <div id="board-container" class="board-container">
         <!-- Todo Board -->
         <div class="board todo-board" id="todo-board">
+          <!--Heading-->
           <h3>Todo</h3>
+          <!--Item Holder-->
+          <div class="itemHolder" id="todo-itemHolder">
 
-          <div draggable="true" class="item">
-            <p>Make them Moveable</p>
+          </div>
+          <!--Input field-->
+          <div class="input-container" id="todo-input-container">
+            <input type="text" placeholder="Type your task" id="todo-input" />
+            <button id="create-todo-btn">+</button>
           </div>
         </div>
 
         <!-- Progress Board -->
         <div class="board progress-board" id="progress-board">
+          <!--Heading-->
           <h3>In Progress</h3>
+
+          <!--Item Holder-->
+          <div class="itemHolder">
+
+          </div>
+
+          <!--Input field-->
+          <div class="input-container">
+            <input type="text" placeholder="Type your task" id="todo-input" />
+            <button id="create-todo-btn">+</button>
+          </div>
         </div>
 
         <!-- Complete Board -->
         <div class="board complete-board" id="complete-board">
+          <!--Heading-->
           <h3>Done</h3>
-          <div draggable="true" class="item">
-            <p>Make Items Draggable</p>
+
+          <!--Item Holder-->
+          <div class="itemHolder">
+
           </div>
-          <div draggable="true" class="item">
-            <p>Add logic to create new task items</p>
+
+          <!--Input field-->
+          <div class="input-container">
+            <input type="text" placeholder="Type your task" id="todo-input" />
+            <button id="create-todo-btn">+</button>
           </div>
         </div>
       </div>

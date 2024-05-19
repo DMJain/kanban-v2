@@ -1,5 +1,5 @@
 const items = document.querySelectorAll('.item')
-const boards = document.querySelectorAll('.board')
+const boards = document.querySelectorAll('.itemHolder')
 
 items.forEach(item => {
     item.addEventListener('dragstart', e => {

@@ -4,16 +4,36 @@
   padding: 0px;
 }
 
+.nav-container {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .container {
   padding: 20px;
 }
 
 .input-container {
   margin: 10px 0px;
+  display: flex;
+  align-content: center;
 }
 
 .input-container input {
   padding: 8px 10px;
+  border-style: none;
+}
+
+.input-container button {
+  padding: 8px 10px;
+  border-style: none;
+  background-color: #007bff;
+  border-radius: 100%;
+  color: white;
+  cursor: pointer;
 }
 
 .board-container {
@@ -24,16 +44,26 @@
 .board {
   border: 1px solid lightgray;
   border-radius: 10px;
-  padding: 5px;
-  height: 80vh;
-  width: 200px;
+  padding: 15px;
+  height: 85vh;
+  width: 230px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.board .itemHolder{
+  flex: 1;
+  overflow-y: auto;
 }
 
 .board h3 {
   text-align: center;
   margin-bottom: 15px;
+  border-bottom: lightgray 1px solid;
 }
+
+
 
 .item {
   border: 1px solid lightgray;

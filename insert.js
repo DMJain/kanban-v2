@@ -2,11 +2,9 @@ const inputEl = document.getElementById('todo-input')
 const createTodoBtn = document.getElementById('create-todo-btn')
 
 
-const todoBoard = document.getElementById('todo-board')
+const todoBoard = document.getElementById('todo-itemHolder')
 
-createTodoBtn.addEventListener('click', e => {
-    const value = inputEl.value;
-
+const insertItem = (value) => {
     const div = document.createElement('div')
     const p = document.createElement('p')
 
@@ -27,6 +25,18 @@ createTodoBtn.addEventListener('click', e => {
     })
 
     todoBoard.appendChild(div)
+}
 
+createTodoBtn.addEventListener('click', e => {
+    const value = inputEl.value;
+    insertItem(value);
     inputEl.value = ''
+})
+
+inputEl.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+        const value = inputEl.value;
+        insertItem(value);
+        inputEl.value = ''
+    }
 })
