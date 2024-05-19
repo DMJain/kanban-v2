@@ -11,7 +11,7 @@ function toggleColorMode() {
       const inputButns = document.querySelectorAll('.insert-button');
       const boards = document.querySelectorAll('.board'); // Get all elements with the class name
       const insertField = document.querySelectorAll('.input-value');
-      
+      const body = document.querySelector('body');
       if (mode) {
         navContainer.classList.add('dark-mode');
         container[0].classList.add('dark-mode');
@@ -24,6 +24,7 @@ function toggleColorMode() {
         insertField.forEach((insert) => {
           insert.classList.add('dark-mode');
         });
+        body.classList.add('dark-mode');
         mode = !mode;
       } else {
         navContainer.classList.remove('dark-mode');
@@ -37,6 +38,7 @@ function toggleColorMode() {
         insertField.forEach((insert) => {
           insert.classList.remove('dark-mode');
         });  
+        body.classList.remove('dark-mode');
         mode = !mode;
       }
     };
