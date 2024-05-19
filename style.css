@@ -4,16 +4,35 @@
   padding: 0px;
 }
 
-.nav-container {
-  background-color: #007bff;
+body {
+  background-color: #f0f0f0;
+}
+
+body.dark-mode {
+  background-color: #1f2129;
   color: white;
+}
+
+.nav-container {
+  
+  color: rgb(0, 123, 255);
   padding: 10px;
   display: flex;
   justify-content: space-between;
 }
 
+.nav-container.dark-mode{
+  color: rgb(106, 80, 255);
+  background-color: #1f2129;
+}
+
 .container {
   padding: 20px;
+}
+
+.container.dark-mode {
+  background-color: #1f2129;
+  color: white;
 }
 
 .input-container {
@@ -27,13 +46,30 @@
   border-style: none;
 }
 
-.input-container button {
+.insert-button {
   padding: 8px 10px;
   border-style: none;
-  background-color: #007bff;
   border-radius: 100%;
-  color: white;
   cursor: pointer;
+  background-color: #007bff;
+  color: white;
+}
+
+.insert-button.dark-mode {
+  background-color: rgb(20, 22, 27);
+  color: rgb(0, 123, 255);
+}
+
+.input-value {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  width: 80%;
+  margin-right: 10px;
+}
+
+.input-value.dark-mode {
+  background-color: rgba(42, 45, 59, 0.445);
+  color: white;
 }
 
 .board-container {
@@ -42,14 +78,21 @@
 }
 
 .board {
-  border: 1px solid lightgray;
   border-radius: 10px;
   padding: 15px;
   height: 85vh;
   width: 230px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: flex;
   flex-direction: column;
+  border: 1px solid lightgray;
+  box-shadow: rgba(0, 123, 255, 0.2) 0px 8px 24px;
+}
+
+.board.dark-mode {
+  background-color: rgba(42, 45, 59, 0.445);
+  color: white;
+  border: 1px solid rgb(42, 45, 59);
+  box-shadow: rgba(106, 80, 255, 0.2) 0px 8px 24px;
 }
 
 .board .itemHolder{
@@ -63,15 +106,24 @@
   border-bottom: lightgray 1px solid;
 }
 
-
+.board.dark-mode h3 {
+  color: white;
+  border-bottom: rgb(102, 102, 102) 1px solid;
+}
 
 .item {
-  border: 1px solid lightgray;
   border-radius: 10px;
   padding: 5px;
   font-size: 14px;
   cursor: pointer;
   margin-bottom: 8px;
+  border: 1px solid lightgray;
+}
+
+.item .dark-mode {
+  background-color: black;
+  color: white;
+  border: 1px solid rgb(68, 68, 68);
 }
 
 .is-dragging {
